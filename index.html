@@ -3,124 +3,414 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KOVA — The KOVA High</title>
+
+<title>KOVA — Built Different</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#070707;color:#f5f5f5;line-height:1.5}
-a{text-decoration:none;color:inherit}
-nav{position:sticky;top:0;z-index:10;background:rgba(7,7,7,.95);border-bottom:1px solid #222;padding:20px 6%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:27px;font-weight:900;letter-spacing:.2em}.logo span{color:#d10000}
-nav a{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#aaa;margin-left:25px}
-nav a:hover{color:#fff}
-.hero{padding:80px 6% 60px;text-align:center;max-width:1300px;margin:auto}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#d10000;font-weight:bold;margin-bottom:15px}
-h1{font-size:clamp(60px,12vw,150px);line-height:.85;letter-spacing:-.06em;margin-bottom:25px}
-.hero p{max-width:650px;margin:auto;color:#999;font-size:17px}
-.button{display:inline-block;margin-top:28px;padding:14px 24px;background:#fff;color:#070707;font-size:11px;font-weight:bold;letter-spacing:.13em;text-transform:uppercase}
-.button.red{background:#d10000;color:#fff}
-.product{max-width:1300px;margin:auto;padding:30px 6% 90px}
-.product-image{background:#0d0d0d;border:1px solid #252525;overflow:hidden}
-.product-image img{display:block;width:100%;height:auto}
-.section{max-width:1100px;margin:auto;padding:90px 6%}
-.section h2{font-size:clamp(38px,6vw,72px);line-height:.95;margin-bottom:20px}
-.section-intro{color:#999;max-width:650px;font-size:16px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
-.card{background:#101010;border:1px solid #252525;padding:30px;min-height:170px}
-.card .number{color:#d10000;font-size:11px;letter-spacing:.18em;font-weight:bold}
-.card h3{font-size:16px;margin:18px 0 10px;letter-spacing:.08em}
-.card p{color:#888;font-size:14px}
-.details{border-top:1px solid #222;border-bottom:1px solid #222}
-.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.details ul{list-style:none;margin-top:25px}
-.details li{padding:14px 0;border-bottom:1px solid #222;color:#aaa}
-.details strong{color:#fff;display:inline-block;width:120px;font-size:12px;letter-spacing:.1em}
-.story{text-align:center}
-.story p{max-width:700px;margin:25px auto;color:#999;font-size:17px}
-.launch{text-align:center;padding:100px 6%;background:#f2f2ef;color:#070707}
-.launch h2{font-size:clamp(50px,9vw,110px);line-height:.85}
-.launch p{max-width:600px;margin:25px auto;color:#555}
-footer{padding:35px 6%;display:flex;justify-content:space-between;gap:20px;border-top:1px solid #222;color:#777;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
-footer strong{color:#fff;font-size:20px}
-@media(max-width:750px){
- nav .links{display:none}
- .features,.details-grid{grid-template-columns:1fr}
- .section{padding:70px 6%}
- footer{flex-direction:column}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: rgba(8,8,8,0.95);
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.logo span {
+    color: #d10000;
+}
+
+nav a {
+    margin-left: 28px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 6%;
+}
+
+.hero-content {
+    max-width: 1100px;
+}
+
+.tag {
+    color: #d10000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(55px, 10vw, 125px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #999;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 30px;
+    background: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #d10000;
+    color: white;
+}
+
+/* SHOE */
+.product {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 6%;
+}
+
+.product-box {
+    background: #101010;
+    border: 1px solid #252525;
+    padding: 35px;
+}
+
+.product-image {
+    width: 100%;
+    display: block;
+    max-height: 650px;
+    object-fit: contain;
+}
+
+.product-info {
+    text-align: center;
+    padding: 35px 10px 10px;
+}
+
+.product-info h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #888;
+    line-height: 1.6;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 110px 6%;
+    text-align: center;
+}
+
+.number {
+    color: #d10000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    color: #999;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* SPECS */
+.specs {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 6% 100px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #292929;
+}
+
+.spec {
+    padding: 25px;
+    border-bottom: 1px solid #292929;
+}
+
+.spec strong {
+    color: #d10000;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.spec p {
+    margin-top: 8px;
+    color: #aaa;
+}
+
+/* LAUNCH */
+.launch {
+    background: #d10000;
+    color: white;
+    max-width: none;
+    padding: 110px 6%;
+}
+
+.launch .number {
+    color: white;
+}
+
+.launch p {
+    color: white;
+    opacity: 0.85;
+}
+
+.launch .button {
+    background: white;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #222;
+    color: #777;
+    line-height: 2;
+}
+
+footer strong {
+    color: white;
+    letter-spacing: 4px;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    nav {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    h1 {
+        letter-spacing: -3px;
+    }
+
+    .product-box {
+        padding: 15px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 35px;
+    }
 }
 </style>
 </head>
+
 <body>
+
 <nav>
-<a class="logo" href="#">KOVA<span>.</span></a>
-<div class="links">
-<a href="#shoe">The Shoe</a>
-<a href="#features">Features</a>
-<a href="#details">Details</a>
-<a href="#launch">Launch</a>
-</div>
+    <div class="logo">KOVA<span>.</span></div>
+
+    <div>
+        <a href="#shoe">Shoe</a>
+        <a href="#story">Story</a>
+        <a href="#launch">Launch</a>
+    </div>
 </nav>
 
-<header class="hero">
-<div class="eyebrow">KOVA HIGH / FIRST EDITION</div>
-<h1>BUILT DIFFERENT.</h1>
-<p>An original everyday high-top designed around a clean silhouette, comfortable foundation, and traction-focused outsole.</p>
-<a class="button" href="#shoe">View the KOVA High</a>
-</header>
+<section class="hero">
+    <div class="hero-content">
 
-<main>
+        <div class="tag">01 / KOVA HIGH</div>
+
+        <h1>BUILT<br>DIFFERENT.</h1>
+
+        <p>
+            A new approach to everyday footwear.
+            Designed from the ground up with a focus on identity,
+            simplicity, and performance.
+        </p>
+
+        <a class="button" href="#shoe">EXPLORE THE SHOE</a>
+
+    </div>
+</section>
+
 <section class="product" id="shoe">
-<div class="product-image">
-<img src="kova-shoe-design(2).png" alt="KOVA High shoe design showing multiple views">
-</div>
+
+    <div class="product-box">
+
+        <img
+            class="product-image"
+            src="kova-shoe-design(2).png"
+            alt="KOVA High shoe"
+        >
+
+        <div class="product-info">
+
+            <h2>KOVA HIGH</h2>
+
+            <p>
+                Black structure. White foundation.
+                KOVA red details. One original design.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="features">
-<div class="eyebrow">01 / FEATURES</div>
-<h2>THE SHOE.</h2>
-<p class="section-intro">Everything on the KOVA High has a purpose. The design stays clean while the construction focuses on everyday comfort, stability and grip.</p>
-<div class="features">
-<div class="card"><div class="number">01</div><h3>COMFORT</h3><p>Designed for everyday wear without unnecessary bulk.</p></div>
-<div class="card"><div class="number">02</div><h3>STABILITY</h3><p>A supportive foundation and balanced high-top structure.</p></div>
-<div class="card"><div class="number">03</div><h3>TRACTION</h3><p>Multi-directional rubber tread designed for everyday grip.</p></div>
-</div>
+<section class="section" id="story">
+
+    <div class="number">02 / THE IDEA</div>
+
+    <h2>ORIGINAL BY DESIGN.</h2>
+
+    <p>
+        KOVA was built from the ground up.
+        The goal is simple: create something with its own identity
+        instead of copying what already exists.
+    </p>
+
 </section>
 
-<section class="section details" id="details">
-<div class="details-grid">
-<div>
-<div class="eyebrow">02 / CONSTRUCTION</div>
-<h2>THE DETAILS.</h2>
-<p class="section-intro">Black, white, gray and controlled red accents keep the KOVA identity simple and recognizable.</p>
-</div>
-<ul>
-<li><strong>UPPER</strong> Black structured upper</li>
-<li><strong>MIDSOLE</strong> White lightweight foam</li>
-<li><strong>OUTSOLE</strong> Black rubber traction</li>
-<li><strong>LACES</strong> Traditional black lacing</li>
-<li><strong>ACCENT</strong> KOVA red details</li>
-</ul>
-</div>
+<section class="specs">
+
+    <div class="spec-grid">
+
+        <div class="spec">
+            <strong>UPPER</strong>
+            <p>Black structured upper</p>
+        </div>
+
+        <div class="spec">
+            <strong>MIDSOLE</strong>
+            <p>White lightweight foam</p>
+        </div>
+
+        <div class="spec">
+            <strong>OUTSOLE</strong>
+            <p>Black rubber traction</p>
+        </div>
+
+        <div class="spec">
+            <strong>LACES</strong>
+            <p>Traditional black lacing</p>
+        </div>
+
+        <div class="spec">
+            <strong>ACCENT</strong>
+            <p>KOVA red details</p>
+        </div>
+
+        <div class="spec">
+            <strong>DESIGN</strong>
+            <p>Original KOVA silhouette</p>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section story">
-<div class="eyebrow">03 / THE IDEA</div>
-<h2>ORIGINAL BY DESIGN.</h2>
-<p>KOVA is being built from the ground up. The goal is simple: create a shoe with its own identity instead of copying an existing brand or silhouette.</p>
-</section>
+<section class="section launch" id="launch">
 
-<section class="launch" id="launch">
-<div class="eyebrow">04 / FIRST RELEASE</div>
-<h2>COMING SOON.</h2>
-<p>The KOVA High is currently in development. Follow the project as the concept moves toward its first prototype and release.</p>
-<a class="button red" href="mailto:hello@kova.example">Contact KOVA</a>
+    <div class="number">03 / FIRST RELEASE</div>
+
+    <h2>COMING SOON.</h2>
+
+    <p>
+        The KOVA High is currently in development.
+        Follow the project as KOVA moves toward its first release.
+    </p>
+
+    <a class="button" href="mailto:kova.example@email.com">
+        CONTACT KOVA
+    </a>
+
 </section>
-</main>
 
 <footer>
-<strong>KOVA<span style="color:#d10000">.</span></strong>
-<span>Engineered for movement. Built different.</span>
-<span>© 2026 KOVA</span>
+
+    <strong>KOVA.</strong><br>
+
+    Engineered for movement. Built different.<br>
+
+    © 2026 KOVA
+
 </footer>
+
 </body>
 </html>
