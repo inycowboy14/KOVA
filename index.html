@@ -13,10 +13,6 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #080808;
@@ -28,7 +24,6 @@ a {
     color: inherit;
 }
 
-/* NAVIGATION */
 nav {
     position: sticky;
     top: 0;
@@ -37,7 +32,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 7%;
-    background: rgba(8,8,8,0.95);
+    background: #080808;
     border-bottom: 1px solid #222;
 }
 
@@ -63,18 +58,13 @@ nav a:hover {
     color: white;
 }
 
-/* HERO */
 .hero {
-    min-height: 85vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 70px 6%;
-}
-
-.hero-content {
-    max-width: 1100px;
 }
 
 .tag {
@@ -86,8 +76,8 @@ nav a:hover {
 }
 
 h1 {
-    font-size: clamp(55px, 10vw, 125px);
-    line-height: 0.9;
+    font-size: clamp(55px, 10vw, 120px);
+    line-height: .9;
     letter-spacing: -5px;
     margin-bottom: 25px;
 }
@@ -109,7 +99,6 @@ h1 {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
-    transition: 0.2s;
 }
 
 .button:hover {
@@ -117,46 +106,69 @@ h1 {
     color: white;
 }
 
-/* SHOE */
+/* PRODUCT */
 .product {
-    max-width: 1250px;
+    max-width: 1400px;
     margin: auto;
-    padding: 70px 6%;
+    padding: 30px 3%;
 }
 
 .product-box {
     background: #101010;
     border: 1px solid #252525;
-    padding: 35px;
+    padding: 10px;
 }
 
 .product-image {
     width: 100%;
     display: block;
-    max-height: 650px;
-    object-fit: contain;
 }
 
 .product-info {
     text-align: center;
-    padding: 35px 10px 10px;
+    padding: 45px 20px;
 }
 
 .product-info h2 {
-    font-size: 38px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
 .product-info p {
-    color: #888;
-    line-height: 1.6;
+    color: #999;
+    margin-bottom: 20px;
 }
 
-/* SECTIONS */
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.sizes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.size {
+    border: 1px solid #444;
+    padding: 12px 18px;
+    color: #ccc;
+}
+
+.size:hover {
+    border-color: #d10000;
+    color: white;
+}
+
 .section {
     max-width: 1000px;
     margin: auto;
-    padding: 110px 6%;
+    padding: 100px 6%;
     text-align: center;
 }
 
@@ -176,44 +188,11 @@ h1 {
 .section p {
     color: #999;
     line-height: 1.8;
-    font-size: 16px;
 }
 
-/* SPECS */
-.specs {
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 6% 100px;
-}
-
-.spec-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border-top: 1px solid #292929;
-}
-
-.spec {
-    padding: 25px;
-    border-bottom: 1px solid #292929;
-}
-
-.spec strong {
-    color: #d10000;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.spec p {
-    margin-top: 8px;
-    color: #aaa;
-}
-
-/* LAUNCH */
 .launch {
     background: #d10000;
-    color: white;
     max-width: none;
-    padding: 110px 6%;
 }
 
 .launch .number {
@@ -222,15 +201,8 @@ h1 {
 
 .launch p {
     color: white;
-    opacity: 0.85;
 }
 
-.launch .button {
-    background: white;
-    color: black;
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 50px 20px;
@@ -244,35 +216,22 @@ footer strong {
     letter-spacing: 4px;
 }
 
-/* MOBILE */
 @media (max-width: 650px) {
     nav {
         padding: 18px 5%;
     }
 
     nav a {
-        margin-left: 12px;
+        margin-left: 10px;
         font-size: 10px;
-    }
-
-    .hero {
-        min-height: 75vh;
     }
 
     h1 {
         letter-spacing: -3px;
     }
 
-    .product-box {
-        padding: 15px;
-    }
-
-    .spec-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section h2 {
-        font-size: 35px;
+    .product-info h2 {
+        font-size: 32px;
     }
 }
 </style>
@@ -291,21 +250,20 @@ footer strong {
 </nav>
 
 <section class="hero">
-    <div class="hero-content">
 
+    <div>
         <div class="tag">01 / KOVA HIGH</div>
 
         <h1>BUILT<br>DIFFERENT.</h1>
 
         <p>
-            A new approach to everyday footwear.
-            Designed from the ground up with a focus on identity,
-            simplicity, and performance.
+            Designed from the ground up.
+            Simple. Original. KOVA.
         </p>
 
-        <a class="button" href="#shoe">EXPLORE THE SHOE</a>
-
+        <a class="button" href="#shoe">SHOP THE KOVA HIGH</a>
     </div>
+
 </section>
 
 <section class="product" id="shoe">
@@ -322,10 +280,25 @@ footer strong {
 
             <h2>KOVA HIGH</h2>
 
-            <p>
-                Black structure. White foundation.
-                KOVA red details. One original design.
-            </p>
+            <p>Engineered for movement. Built different.</p>
+
+            <div class="price">COMING SOON</div>
+
+            <div class="sizes">
+                <div class="size">5</div>
+                <div class="size">6</div>
+                <div class="size">7</div>
+                <div class="size">8</div>
+                <div class="size">9</div>
+                <div class="size">10</div>
+                <div class="size">11</div>
+                <div class="size">12</div>
+                <div class="size">13</div>
+                <div class="size">14</div>
+                <div class="size">15</div>
+            </div>
+
+            <a class="button" href="#launch">SHOP NOW</a>
 
         </div>
 
@@ -341,47 +314,8 @@ footer strong {
 
     <p>
         KOVA was built from the ground up.
-        The goal is simple: create something with its own identity
-        instead of copying what already exists.
+        The goal is simple: create something with its own identity.
     </p>
-
-</section>
-
-<section class="specs">
-
-    <div class="spec-grid">
-
-        <div class="spec">
-            <strong>UPPER</strong>
-            <p>Black structured upper</p>
-        </div>
-
-        <div class="spec">
-            <strong>MIDSOLE</strong>
-            <p>White lightweight foam</p>
-        </div>
-
-        <div class="spec">
-            <strong>OUTSOLE</strong>
-            <p>Black rubber traction</p>
-        </div>
-
-        <div class="spec">
-            <strong>LACES</strong>
-            <p>Traditional black lacing</p>
-        </div>
-
-        <div class="spec">
-            <strong>ACCENT</strong>
-            <p>KOVA red details</p>
-        </div>
-
-        <div class="spec">
-            <strong>DESIGN</strong>
-            <p>Original KOVA silhouette</p>
-        </div>
-
-    </div>
 
 </section>
 
@@ -393,12 +327,8 @@ footer strong {
 
     <p>
         The KOVA High is currently in development.
-        Follow the project as KOVA moves toward its first release.
+        Follow KOVA as we move toward the first release.
     </p>
-
-    <a class="button" href="mailto:kova.example@email.com">
-        CONTACT KOVA
-    </a>
 
 </section>
 
