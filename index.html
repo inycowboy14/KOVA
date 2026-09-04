@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>KOVA — Built Different</title>
 
 <style>
@@ -67,7 +66,8 @@ nav a:hover {
     padding: 70px 6%;
 }
 
-.tag {
+.tag,
+.number {
     color: #d10000;
     font-size: 12px;
     font-weight: bold;
@@ -156,11 +156,14 @@ h1 {
 
 .size {
     border: 1px solid #444;
-    padding: 12px 18px;
+    padding: 14px 20px;
     color: #ccc;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .size:hover {
+    background: #d10000;
     border-color: #d10000;
     color: white;
 }
@@ -170,14 +173,6 @@ h1 {
     margin: auto;
     padding: 100px 6%;
     text-align: center;
-}
-
-.number {
-    color: #d10000;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
 }
 
 .section h2 {
@@ -203,6 +198,7 @@ h1 {
     color: white;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 50px 20px;
@@ -216,6 +212,7 @@ footer strong {
     letter-spacing: 4px;
 }
 
+/* MOBILE */
 @media (max-width: 650px) {
     nav {
         padding: 18px 5%;
@@ -298,7 +295,7 @@ footer strong {
                 <div class="size">15</div>
             </div>
 
-          <a class="button" href="#order">SHOP NOW</a>
+            <a class="button" href="#order">SHOP NOW</a>
 
         </div>
 
@@ -331,6 +328,7 @@ footer strong {
     </p>
 
 </section>
+
 <section class="section" id="order">
 
     <div class="number">04 / ORDER</div>
@@ -356,6 +354,7 @@ footer strong {
     <div class="price">COMING SOON</div>
 
 </section>
+
 <footer>
 
     <strong>KOVA.</strong><br>
